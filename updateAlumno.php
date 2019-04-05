@@ -17,9 +17,9 @@ $nombre = $_POST['txtName'];
 $idCred  = $_POST['txtCred'];
 
 $sql = "UPDATE students 
-        SET id_cred = COALESCE('$idCred', id_cred), 
-            matricula = COALESCE('$mat', matricula), 
-            nombre_completo = COALESCE('$nombre', nombre_completo)
+        SET id_cred = '$idCred',
+            matricula = '$mat',
+            nombre_completo = '$nombre'
         WHERE id = $idHuella
         ";
 //$sql = "UPDATE students SET id_cred = $idCred, matricula = '$mat', nombre_completo = '$nombre' WHERE id = $idHuella";
